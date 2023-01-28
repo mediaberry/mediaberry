@@ -1,0 +1,7 @@
+#!/bin/sh
+
+source /etc/profile
+export HOME=/root
+cd /root
+
+startx

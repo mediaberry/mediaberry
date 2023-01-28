@@ -1,0 +1,3 @@
+#!/bin/sh
+
+omxplayer /etc/mediaberry/splash.mp4 &
