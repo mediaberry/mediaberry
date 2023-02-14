@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+echo "Enabling Developer Mode..."
+
+echo "root=/dev/mmcblk0p2 rootwait console=tty1 console=ttyAMA0,115200" > /boot/cmdline.txt
+touch /etc/mediaberry/devmode
+
+echo "Developer Mode has been enabled!"

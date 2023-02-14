@@ -1,3 +1,9 @@
 #!/bin/sh
 
+if [ -f /etc/mediaberry/devmode ]
+then
+	echo "Skipping boot splash - Developer mode is enabled"
+	exit
+fi
+
 omxplayer /etc/mediaberry/splash.mp4 &
