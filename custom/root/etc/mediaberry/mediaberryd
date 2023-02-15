@@ -15,7 +15,11 @@ fi
 
 echo "mediaberryd: mounting /boot"
 
-mkdir /boot
+if [ ! -d /boot ]
+then
+	mkdir /boot
+fi
+
 mount /dev/mmcblk0p1 /boot
 mount -o remount,ro /boot # force /boot to be read-only
 
