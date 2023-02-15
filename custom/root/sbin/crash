@@ -1,0 +1,18 @@
+#!/bin/sh
+
+clear
+
+cat /etc/mediaberry/crashbanner
+
+echo "Mediaberry has crashed and cannot continue."
+echo ""
+echo "Error code: $1"
+
+while true
+do
+	sleep 1
+done
+
+cat /etc/mediaberry/crashfooter
+
+echo

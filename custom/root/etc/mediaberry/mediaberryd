@@ -1,5 +1,11 @@
 #!/bin/sh
 
+if [ -f /tmp/crashinfo ]
+then
+	crash $(cat /tmp/crashinfo)
+	exit
+fi
+
 if [ -f /etc/mediaberry/devmode ]
 then
 	echo "mediaberryd: developer mode is enabled"
@@ -11,6 +17,7 @@ echo "mediaberryd: mounting /boot"
 
 mkdir /boot
 mount /dev/mmcblk0p1 /boot
+mount -o remount,ro /boot # force /boot to be read-only
 
 # prepare environment variables
 
